@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_marginTop="@dimen/post_row_item_margin_top"
+              android:layout_marginBottom="@dimen/post_row_item_margin_bottom">
+
+    <TextView
+        android:id="@+id/post_title"
+        android:textSize="@dimen/post_title_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/post_body"
+        android:layout_marginTop="@dimen/post_body_margin_top"
+        android:textSize="@dimen/post_body_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
