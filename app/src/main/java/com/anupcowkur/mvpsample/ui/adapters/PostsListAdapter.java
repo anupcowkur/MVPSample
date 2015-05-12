@@ -28,13 +28,6 @@ public class PostsListAdapter extends RecyclerView.Adapter<PostsListAdapter.View
         notifyDataSetChanged();
     }
 
-    public void showError() {
-        posts.clear();
-        Post errorPost = new Post(0, 0, "Error", "Please check your network connection");
-        posts.add(errorPost);
-        notifyDataSetChanged();
-    }
-
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int position) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.post_row_item, parent, false);
