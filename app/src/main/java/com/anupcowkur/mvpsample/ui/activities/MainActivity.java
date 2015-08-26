@@ -1,13 +1,14 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
+import com.anupcowkur.mvpsample.R;
+import com.anupcowkur.mvpsample.dagger.DaggerInjector;
+import com.anupcowkur.mvpsample.ui.presenters.MainPresenter;
+import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
-import com.anupcowkur.mvpsample.R;
-import com.anupcowkur.mvpsample.dagger.DaggerInjector;
-import com.anupcowkur.mvpsample.ui.presenters.MainPresenter;
 
 import javax.inject.Inject;
 
@@ -15,7 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements MainScreen {
 
     @Inject
     MainPresenter mainPresenter;

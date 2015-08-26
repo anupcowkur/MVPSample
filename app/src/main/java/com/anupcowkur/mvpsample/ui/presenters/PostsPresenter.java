@@ -5,7 +5,6 @@ import com.anupcowkur.mvpsample.events.ErrorEvent;
 import com.anupcowkur.mvpsample.events.NewPostsEvent;
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.data.Post;
-import com.anupcowkur.mvpsample.ui.activities.PostsActivity;
 
 import java.util.List;
 
@@ -25,31 +24,25 @@ public class PostsPresenter {
         DaggerInjector.get().inject(this);
     }
 
-    public void initRecyclerView(PostsActivity postsActivity) {
-
-        postsActivity.initRecyclerViewUI();
-
-        postsActivity.initRecyclerViewAdapter();
-    }
-
     public void loadPostsFromAPI() {
         postsAPI.getPostsObservable().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers
-                .mainThread()).subscribe(new Subscriber<List<Post>>() {
-            @Override
-            public void onNext(List<Post> newPosts) {
-                EventBus.getDefault().post(new NewPostsEvent(newPosts));
-            }
+                                                                                     .mainThread())
+                .subscribe(new Subscriber<List<Post>>() {
+                    @Override
+                    public void onNext(List<Post> newPosts) {
+                        EventBus.getDefault().post(new NewPostsEvent(newPosts));
+                    }
 
-            @Override
-            public void onCompleted() {
-            }
+                    @Override
+                    public void onCompleted() {
+                    }
 
-            @Override
-            public void onError(Throwable e) {
-                EventBus.getDefault().post(new ErrorEvent());
-            }
+                    @Override
+                    public void onError(Throwable e) {
+                        EventBus.getDefault().post(new ErrorEvent());
+                    }
 
-        });
+                });
     }
 
 }

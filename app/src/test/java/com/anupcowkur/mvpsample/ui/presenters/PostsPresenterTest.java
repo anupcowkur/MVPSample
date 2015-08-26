@@ -2,7 +2,6 @@ package com.anupcowkur.mvpsample.ui.presenters;
 
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.data.Post;
-import com.anupcowkur.mvpsample.ui.activities.PostsActivity;
 
 import junit.framework.TestCase;
 
@@ -10,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Matchers;
-import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -41,18 +39,6 @@ public class PostsPresenterTest extends TestCase {
         super.setUp();
 
         postsPresenter = spy(new PostsPresenter());
-
-    }
-
-    @Test
-    @SmallTest
-    public void testShouldInitRecyclerView() {
-        PostsActivity postsActivity = Mockito.mock(PostsActivity.class);
-
-        postsPresenter.initRecyclerView(postsActivity);
-
-        verify(postsActivity, times(1)).initRecyclerViewUI();
-        verify(postsActivity, times(1)).initRecyclerViewAdapter();
 
     }
 

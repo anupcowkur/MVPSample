@@ -1,6 +1,6 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import com.anupcowkur.mvpsample.ui.activities.MainActivity;
+import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
 
 import junit.framework.TestCase;
 
@@ -32,12 +32,12 @@ public class MainPresenterTest extends TestCase {
     @Test
     @SmallTest
     public void testShouldShowToastAndLaunchActivityOnShowPostsButtonClick() {
-        MainActivity mainActivity = mock(MainActivity.class);
+        MainScreen mainScreen = mock(MainScreen.class);
 
-        mainPresenter.OnShowPostsButtonClick(mainActivity);
+        mainPresenter.OnShowPostsButtonClick(mainScreen);
 
-        verify(mainActivity, times(1)).showToast();
-        verify(mainActivity, times(1)).launchPostsActivity();
+        verify(mainScreen, times(1)).showToast();
+        verify(mainScreen, times(1)).launchPostsActivity();
 
     }
 
