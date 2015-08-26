@@ -10,7 +10,7 @@ import rx.Observable;
 
 public class PostsAPI {
 
-    private static interface PostService {
+    private interface PostService {
         @GET("/posts")
         Observable<List<Post>> getPostsList();
     }
