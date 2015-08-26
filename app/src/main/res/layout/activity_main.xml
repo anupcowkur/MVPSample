@@ -12,6 +12,7 @@
     <Button
         android:id="@+id/show_posts_button"
         android:text="@string/list_sample"
+        android:textColor="@color/icons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
