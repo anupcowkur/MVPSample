@@ -59,7 +59,6 @@ public class PostsPresenterTest extends TestCase {
         postsPresenter.loadPostsFromAPI();
 
         //verify if all methods in the chain are called with correct arguments
-
         verify(postsPresenter.postsAPI, times(1)).getPostsObservable();
         verify(postsObservable, times(1)).subscribeOn(Schedulers.io());
         verify(postsObservable, times(1)).observeOn(AndroidSchedulers.mainThread());

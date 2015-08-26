@@ -12,7 +12,6 @@ public class NewPostsEvent {
     }
 
     public NewPostsEvent(List<Post> posts) {
-
         this.posts = posts;
     }
 }
