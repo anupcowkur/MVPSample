@@ -49,8 +49,8 @@ dependencies {
     testCompile 'org.powermock:powermock-api-mockito:1.5.6'
     testCompile 'org.powermock:powermock-module-junit4:1.6.2'
 
-    androidTestCompile 'com.android.support.test:testing-support-lib:0.1'
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.0') {
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2') {
         exclude group: 'javax.inject'
     }
+    androidTestCompile 'com.android.support.test:runner:0.3'
 }
