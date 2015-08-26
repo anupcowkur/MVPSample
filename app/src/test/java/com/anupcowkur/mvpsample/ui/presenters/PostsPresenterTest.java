@@ -1,7 +1,5 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import android.test.suitebuilder.annotation.SmallTest;
-
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.data.Post;
 import com.anupcowkur.mvpsample.ui.activities.PostsActivity;
@@ -11,9 +9,12 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Matchers;
 import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
+
+import android.test.suitebuilder.annotation.SmallTest;
 
 import java.util.List;
 
@@ -62,7 +63,6 @@ public class PostsPresenterTest extends TestCase {
         //create mocks
         Observable<List<Post>> postsObservable = (Observable<List<Post>>) mock(Observable.class);
         postsPresenter.postsAPI = mock(PostsAPI.class);
-        postsPresenter.postsSubscriber = (Subscriber<List<Post>>) mock(Subscriber.class);
 
         //define return values
         when(postsPresenter.postsAPI.getPostsObservable()).thenReturn(postsObservable);
@@ -77,7 +77,7 @@ public class PostsPresenterTest extends TestCase {
         verify(postsPresenter.postsAPI, times(1)).getPostsObservable();
         verify(postsObservable, times(1)).subscribeOn(Schedulers.io());
         verify(postsObservable, times(1)).observeOn(AndroidSchedulers.mainThread());
-        verify(postsObservable, times(1)).subscribe(postsPresenter.postsSubscriber);
+        verify(postsObservable, times(1)).subscribe(Matchers.<Subscriber<List<Post>>>any());
     }
 
 }

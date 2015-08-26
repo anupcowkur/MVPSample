@@ -1,7 +1,5 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import android.test.suitebuilder.annotation.SmallTest;
-
 import com.anupcowkur.mvpsample.ui.activities.MainActivity;
 
 import junit.framework.TestCase;
@@ -10,6 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
+
+import android.test.suitebuilder.annotation.SmallTest;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
