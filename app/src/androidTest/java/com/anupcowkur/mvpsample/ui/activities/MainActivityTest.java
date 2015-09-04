@@ -1,8 +1,5 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
-import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.MediumTest;
-
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.utils.ActivityRule;
 
@@ -10,6 +7,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+
+import android.support.test.runner.AndroidJUnit4;
+import android.test.suitebuilder.annotation.MediumTest;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -40,7 +40,7 @@ public class MainActivityTest {
 
         onView(withId(R.id.show_posts_button)).perform(click());
 
-        onView(withText(R.string.lauching_show_posts_activity)).inRoot(withDecorView(not(is(mainActivity
+        onView(withText(R.string.launching_posts_activity)).inRoot(withDecorView(not(is(mainActivity
                 .getWindow().getDecorView())))).check(matches(isDisplayed()));
 
     }

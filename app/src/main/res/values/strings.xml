@@ -3,6 +3,6 @@
     <string name="posts_activity">PostsActivity</string>
 
     <string name="list_sample">Show Posts</string>
-    <string name="lauching_show_posts_activity">Launching Show Posts Activity..</string>
+    <string name="launching_posts_activity">Launching Posts Activity..</string>
     <string name="error">Error! Check your network connection!</string>
 </resources>

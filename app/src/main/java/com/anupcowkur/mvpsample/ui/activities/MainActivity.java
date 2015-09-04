@@ -37,7 +37,7 @@ public class MainActivity extends Activity implements MainScreen {
     }
 
     public void showToast() {
-        Toast.makeText(this, R.string.lauching_show_posts_activity, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.launching_posts_activity, Toast.LENGTH_SHORT).show();
     }
 
     public void launchPostsActivity() {
