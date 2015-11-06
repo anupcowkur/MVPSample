@@ -1,5 +1,13 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
+import android.app.Activity;
+import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.TextView;
+
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.dagger.DaggerInjector;
 import com.anupcowkur.mvpsample.events.ErrorEvent;
@@ -8,14 +16,6 @@ import com.anupcowkur.mvpsample.ui.adapters.PostsListAdapter;
 import com.anupcowkur.mvpsample.ui.decorators.DividerItemDecoration;
 import com.anupcowkur.mvpsample.ui.presenters.PostsPresenter;
 import com.anupcowkur.mvpsample.ui.viewinterfaces.PostsScreen;
-
-import android.app.Activity;
-import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.TextView;
 
 import javax.inject.Inject;
 
@@ -44,7 +44,6 @@ public class PostsActivity extends Activity implements PostsScreen {
 
         DaggerInjector.get().inject(this);
         ButterKnife.inject(this);
-        postsPresenter.injectDependencies();
 
         initRecyclerView();
         postsPresenter.loadPostsFromAPI();

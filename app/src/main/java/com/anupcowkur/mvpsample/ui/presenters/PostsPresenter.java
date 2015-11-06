@@ -1,14 +1,12 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import com.anupcowkur.mvpsample.dagger.DaggerInjector;
 import com.anupcowkur.mvpsample.events.ErrorEvent;
 import com.anupcowkur.mvpsample.events.NewPostsEvent;
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.data.Post;
 
-import java.util.List;
-
 import javax.inject.Inject;
+import java.util.List;
 
 import de.greenrobot.event.EventBus;
 import rx.Subscriber;
@@ -16,12 +14,11 @@ import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
 public class PostsPresenter {
-
-    @Inject
     PostsAPI postsAPI;
 
-    public void injectDependencies() {
-        DaggerInjector.get().inject(this);
+    @Inject
+    public PostsPresenter(PostsAPI postsAPI) {
+        this.postsAPI = postsAPI;
     }
 
     public void loadPostsFromAPI() {
