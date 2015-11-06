@@ -1,6 +1,6 @@
 package com.anupcowkur.mvpsample.model;
 
-import com.anupcowkur.mvpsample.model.data.Post;
+import com.anupcowkur.mvpsample.model.pojo.Post;
 
 import java.util.List;
 

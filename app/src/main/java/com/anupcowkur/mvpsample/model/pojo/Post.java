@@ -1,4 +1,4 @@
-package com.anupcowkur.mvpsample.model.data;
+package com.anupcowkur.mvpsample.model.pojo;
 
 public class Post {
     private final Integer userId;

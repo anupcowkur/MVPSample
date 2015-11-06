@@ -6,16 +6,16 @@ import android.test.suitebuilder.annotation.MediumTest;
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.events.ErrorEvent;
 import com.anupcowkur.mvpsample.events.NewPostsEvent;
-import com.anupcowkur.mvpsample.model.data.Post;
+import com.anupcowkur.mvpsample.model.pojo.Post;
 import com.anupcowkur.mvpsample.utils.ActivityRule;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import de.greenrobot.event.EventBus;
 

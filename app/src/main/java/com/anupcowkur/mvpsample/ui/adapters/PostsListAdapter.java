@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.anupcowkur.mvpsample.R;
-import com.anupcowkur.mvpsample.model.data.Post;
+import com.anupcowkur.mvpsample.model.pojo.Post;
 
 import java.util.ArrayList;
 import java.util.List;

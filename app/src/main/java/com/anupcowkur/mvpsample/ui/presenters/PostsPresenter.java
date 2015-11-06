@@ -3,7 +3,7 @@ package com.anupcowkur.mvpsample.ui.presenters;
 import com.anupcowkur.mvpsample.events.ErrorEvent;
 import com.anupcowkur.mvpsample.events.NewPostsEvent;
 import com.anupcowkur.mvpsample.model.PostsAPI;
-import com.anupcowkur.mvpsample.model.data.Post;
+import com.anupcowkur.mvpsample.model.pojo.Post;
 
 import javax.inject.Inject;
 import java.util.List;
