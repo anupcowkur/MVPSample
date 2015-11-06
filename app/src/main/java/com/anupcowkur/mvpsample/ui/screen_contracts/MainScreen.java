@@ -1,4 +1,4 @@
-package com.anupcowkur.mvpsample.ui.viewinterfaces;
+package com.anupcowkur.mvpsample.ui.screen_contracts;
 
 public interface MainScreen {
 

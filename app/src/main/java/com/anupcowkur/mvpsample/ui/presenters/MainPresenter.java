@@ -1,6 +1,6 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
+import com.anupcowkur.mvpsample.ui.screen_contracts.MainScreen;
 
 import javax.inject.Inject;
 

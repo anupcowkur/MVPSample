@@ -2,7 +2,7 @@ package com.anupcowkur.mvpsample.ui.presenters;
 
 import android.test.suitebuilder.annotation.SmallTest;
 
-import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
+import com.anupcowkur.mvpsample.ui.screen_contracts.MainScreen;
 
 import org.junit.Before;
 import org.junit.Test;

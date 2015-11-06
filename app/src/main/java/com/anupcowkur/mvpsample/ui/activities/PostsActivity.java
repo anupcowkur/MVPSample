@@ -15,7 +15,7 @@ import com.anupcowkur.mvpsample.events.NewPostsEvent;
 import com.anupcowkur.mvpsample.ui.adapters.PostsListAdapter;
 import com.anupcowkur.mvpsample.ui.decorators.DividerItemDecoration;
 import com.anupcowkur.mvpsample.ui.presenters.PostsPresenter;
-import com.anupcowkur.mvpsample.ui.viewinterfaces.PostsScreen;
+import com.anupcowkur.mvpsample.ui.screen_contracts.PostsScreen;
 
 import javax.inject.Inject;
 

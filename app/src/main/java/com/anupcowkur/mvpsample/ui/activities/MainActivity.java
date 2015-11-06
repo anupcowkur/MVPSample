@@ -3,7 +3,7 @@ package com.anupcowkur.mvpsample.ui.activities;
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.dagger.DaggerInjector;
 import com.anupcowkur.mvpsample.ui.presenters.MainPresenter;
-import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
+import com.anupcowkur.mvpsample.ui.screen_contracts.MainScreen;
 
 import android.app.Activity;
 import android.content.Intent;
