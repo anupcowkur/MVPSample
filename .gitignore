@@ -21,3 +21,5 @@ proguard_logs/
 #gradle
 .gradle/
 
+
+*.alloc
