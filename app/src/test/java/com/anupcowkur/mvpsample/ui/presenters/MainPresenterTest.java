@@ -1,19 +1,17 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
+import android.test.suitebuilder.annotation.SmallTest;
 
-import junit.framework.TestCase;
+import com.anupcowkur.mvpsample.ui.viewinterfaces.MainScreen;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import android.test.suitebuilder.annotation.SmallTest;
+import junit.framework.TestCase;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @RunWith(JUnit4.class)
 public class MainPresenterTest extends TestCase {
@@ -36,8 +34,8 @@ public class MainPresenterTest extends TestCase {
 
         mainPresenter.OnShowPostsButtonClick(mainScreen);
 
-        verify(mainScreen, times(1)).showToast();
-        verify(mainScreen, times(1)).launchPostsActivity();
+        verify(mainScreen).showToast();
+        verify(mainScreen).launchPostsActivity();
 
     }
 
