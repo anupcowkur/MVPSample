@@ -40,7 +40,7 @@ public class PostsActivityTest {
 
     @Test
     @MediumTest
-    public void testShouldShowUpdatedRecyclerViewOnNewPosts() {
+    public void testShouldShowRecyclerViewOnNewPosts() {
 
         List<Post> posts = new ArrayList<>();
         posts.add(new Post(1, 1, "title 1", "body 1"));
