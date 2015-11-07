@@ -14,7 +14,6 @@ import org.mockito.Matchers;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import junit.framework.TestCase;
 import rx.Observable;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
@@ -25,14 +24,12 @@ import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({Observable.class, AndroidSchedulers.class})
-public class PostsPresenterTest extends TestCase {
+public class PostsPresenterTest{
 
     private PostsPresenter postsPresenter;
 
     @Before
-    @Override
     public void setUp() throws Exception {
-        super.setUp();
         postsPresenter = spy(new PostsPresenter(mock(PostsAPI.class)));
 
     }
