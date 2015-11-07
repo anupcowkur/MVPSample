@@ -1,7 +1,7 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import de.greenrobot.event.EventBus;
 
-public class PostsActivity extends Activity implements PostsScreen {
+public class PostsActivity extends AppCompatActivity implements PostsScreen {
 
     @Inject
     PostsPresenter postsPresenter;

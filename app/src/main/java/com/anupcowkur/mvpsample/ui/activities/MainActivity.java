@@ -1,8 +1,8 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.dagger.DaggerInjector;
@@ -14,8 +14,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
-public class MainActivity extends Activity implements MainScreen {
+public class MainActivity extends AppCompatActivity implements MainScreen {
 
     @Inject
     MainPresenter mainPresenter;
