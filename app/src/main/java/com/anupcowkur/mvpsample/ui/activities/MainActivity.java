@@ -35,6 +35,7 @@ public class MainActivity extends Activity implements MainScreen {
         mainPresenter.OnShowPostsButtonClick(this);
     }
 
+    @Override
     public void launchPostsActivity() {
         Intent intent = new Intent(this, PostsActivity.class);
         startActivity(intent);
