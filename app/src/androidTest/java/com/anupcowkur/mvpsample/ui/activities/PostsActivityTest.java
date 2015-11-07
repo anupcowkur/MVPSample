@@ -1,7 +1,7 @@
 package com.anupcowkur.mvpsample.ui.activities;
 
 import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.MediumTest;
+import android.test.suitebuilder.annotation.LargeTest;
 
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.events.ErrorEvent;
@@ -26,6 +26,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static org.hamcrest.Matchers.not;
 
 @RunWith(AndroidJUnit4.class)
+@LargeTest
 public class PostsActivityTest {
 
     @Rule
@@ -39,7 +40,6 @@ public class PostsActivityTest {
     }
 
     @Test
-    @MediumTest
     public void testShouldShowRecyclerViewOnNewPosts() {
 
         List<Post> posts = new ArrayList<>();
@@ -62,7 +62,6 @@ public class PostsActivityTest {
     }
 
     @Test
-    @MediumTest
     public void testShouldShowErrorViewOnNetworkError() {
 
         EventBus.getDefault().post(new ErrorEvent());
