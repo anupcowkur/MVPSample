@@ -3,7 +3,6 @@ package com.anupcowkur.mvpsample.ui.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.anupcowkur.mvpsample.R;
 import com.anupcowkur.mvpsample.dagger.DaggerInjector;
@@ -36,14 +35,9 @@ public class MainActivity extends Activity implements MainScreen {
         mainPresenter.OnShowPostsButtonClick(this);
     }
 
-    public void showToast() {
-        Toast.makeText(this, R.string.launching_posts_activity, Toast.LENGTH_SHORT).show();
-    }
-
     public void launchPostsActivity() {
         Intent intent = new Intent(this, PostsActivity.class);
         startActivity(intent);
     }
-
 
 }

@@ -25,7 +25,6 @@ public class MainPresenterTest {
 
         mainPresenter.OnShowPostsButtonClick(mainScreen);
 
-        verify(mainScreen).showToast();
         verify(mainScreen).launchPostsActivity();
 
     }

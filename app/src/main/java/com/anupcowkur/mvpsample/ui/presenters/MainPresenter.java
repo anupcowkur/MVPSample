@@ -11,7 +11,6 @@ public class MainPresenter {
     }
 
     public void OnShowPostsButtonClick(MainScreen mainScreen) {
-        mainScreen.showToast();
         mainScreen.launchPostsActivity();
     }
 
