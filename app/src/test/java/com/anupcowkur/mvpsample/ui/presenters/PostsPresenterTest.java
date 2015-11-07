@@ -1,7 +1,5 @@
 package com.anupcowkur.mvpsample.ui.presenters;
 
-import android.test.suitebuilder.annotation.SmallTest;
-
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.pojo.Post;
 
@@ -35,7 +33,6 @@ public class PostsPresenterTest{
     }
 
     @Test
-    @SmallTest
     public void testShouldSchedulePostsLoadFromAPIOnBackgroundThread() {
 
         //create mocks
