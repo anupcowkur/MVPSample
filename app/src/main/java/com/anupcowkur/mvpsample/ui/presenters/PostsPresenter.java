@@ -5,10 +5,11 @@ import com.anupcowkur.mvpsample.events.NewPostsEvent;
 import com.anupcowkur.mvpsample.model.PostsAPI;
 import com.anupcowkur.mvpsample.model.pojo.Post;
 
+import org.greenrobot.eventbus.EventBus;
+
 import javax.inject.Inject;
 import java.util.List;
 
-import de.greenrobot.event.EventBus;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
