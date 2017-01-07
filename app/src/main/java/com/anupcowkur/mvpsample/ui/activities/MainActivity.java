@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
         setContentView(R.layout.activity_main);
 
         DaggerInjector.get().inject(this);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
     }
 
+    @SuppressWarnings("unused")
     @OnClick(R.id.show_posts_button)
-    public void OnListSampleButtonClick() {
+    public void onListSampleButtonClick() {
         mainPresenter.OnShowPostsButtonClick(this);
     }
 

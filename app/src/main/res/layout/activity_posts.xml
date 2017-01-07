@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.activities.PostsActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/posts_recycler_view"

@@ -17,21 +17,24 @@ import com.anupcowkur.mvpsample.ui.decorators.DividerItemDecoration;
 import com.anupcowkur.mvpsample.ui.presenters.PostsPresenter;
 import com.anupcowkur.mvpsample.ui.screen_contracts.PostsScreen;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
-import de.greenrobot.event.EventBus;
 
 public class PostsActivity extends AppCompatActivity implements PostsScreen {
 
     @Inject
     PostsPresenter postsPresenter;
 
-    @InjectView(R.id.posts_recycler_view)
+    @BindView(R.id.posts_recycler_view)
     RecyclerView postsRecyclerView;
 
-    @InjectView(R.id.error_view)
+    @BindView(R.id.error_view)
     TextView errorView;
 
     PostsListAdapter postsListAdapter;
@@ -43,7 +46,7 @@ public class PostsActivity extends AppCompatActivity implements PostsScreen {
         setContentView(R.layout.activity_posts);
 
         DaggerInjector.get().inject(this);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         initRecyclerView();
         postsPresenter.loadPostsFromAPI();
@@ -71,11 +74,15 @@ public class PostsActivity extends AppCompatActivity implements PostsScreen {
         postsRecyclerView.setAdapter(postsListAdapter);
     }
 
+    @SuppressWarnings("unused")
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(NewPostsEvent newPostsEvent) {
         hideError();
         postsListAdapter.addPosts(newPostsEvent.getPosts());
     }
 
+    @SuppressWarnings("unused")
+    @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(ErrorEvent errorEvent) {
         showError();
     }

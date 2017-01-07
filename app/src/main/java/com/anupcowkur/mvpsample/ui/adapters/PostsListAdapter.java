@@ -12,8 +12,8 @@ import com.anupcowkur.mvpsample.model.pojo.Post;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class PostsListAdapter extends RecyclerView.Adapter<PostsListAdapter.ViewHolder> {
 
@@ -47,14 +47,14 @@ public class PostsListAdapter extends RecyclerView.Adapter<PostsListAdapter.View
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        @InjectView(R.id.post_title)
+        @BindView(R.id.post_title)
         TextView postTitle;
-        @InjectView(R.id.post_body)
+        @BindView(R.id.post_body)
         TextView postBody;
 
         public ViewHolder(View view) {
             super(view);
-            ButterKnife.inject(this, view);
+            ButterKnife.bind(this, view);
         }
     }
 
